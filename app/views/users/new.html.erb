@@ -14,10 +14,12 @@
         <%= f.label :パスワード %>
         <%= f.password_field :password, class: 'form-control' %>
   
-        <%= f.label :確認用パスワード, "Confirmation" %>
+        <%= f.label :確認用パスワード %>
         <%= f.password_field :password_confirmation, class: 'form-control' %>
 
       <%= f.submit "新しいアカウントを作成", class: "btn btn-primary" %>
+
+      <p>アカウントをお持ちの方はログイン <%= link_to "ログイン", login_path %></p>
     <% end %>
   </div>
 </div>
