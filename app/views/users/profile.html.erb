@@ -1,4 +1,16 @@
 <%= render "shared/main" %>
 <h2>プロフィール</h2>
 <h2>編集</h2>
-<%= @user.name %>
+
+    <ul><% if @user.post_image.blank? %>
+    <li><%= image_tag "/assets/default.png" %></li>
+    <li><%= @user.name %></li>
+    <li><%= @user.introduction %></li>
+    <p><%= link_to '編集', [:edit_profile] %></p>
+    <% else %>
+       <li><%= image_tag @user.post_image.url %></li>
+       <li><%= @user.name %></li>
+       <li><%= @user.introduction %></li>
+       <p><%= link_to '編集', [:edit_profile] %></p>
+    <% end %>
+    </ul>

@@ -1,36 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-header,div,ul,li{
-    margin: 0;
-    padding: 0;
-
- }
-
-.navbar {
-    background-color: #1c1d3b;
-    padding-bottom: 15px;
-    height: 60px;
-    width: 100%;
-}
-
-.container {
-    text-align: left;
-}
-
-.nav {
-    list-style: none;
-    gap: 25px!important;
-    margin-right: 20px;
-}
-
-.navbar-right {
-    display:flex;
-  flex-direction: row!important;
-  justify-content: end;
-    
-}
-
 /* mixins, variables, etc. */
 
 $gray-medium-light: #eaeaea;
@@ -68,3 +38,27 @@ $gray-medium-light: #eaeaea;
       }
     }
   }
+
+  header,div,ul,li{
+    margin: 0;
+    padding: 0;
+
+ }
+
+.navbar {
+    background-color: #202149;
+    padding-bottom: 15px;
+    height: 60px;
+    width: 100%;
+}
+
+.nav {
+  list-style: none;
+  gap: 25px!important;
+  margin-right: 20px;
+}
+
+.navbar-right {
+  display:flex;
+flex-direction: row!important;
+}

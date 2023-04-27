@@ -4,7 +4,7 @@
     <div class="a_div">
       <ul class="a_ul">
         <li><%= link_to "アカウント", user_path %></li>
-        <li><%= link_to "プロフィール", profile_path %></li>
+        <li><%= link_to "プロフィール", profile_user_path(@user.id) %></li>
       </ul>
     </div>
   </section>

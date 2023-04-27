@@ -1,18 +1,31 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-body,div,h2 {
-    margin: 0;
-padding: 0;
-border: none;
-font-style: normal;
-text-align: left;
-zoom: 1;
-}
 
-section {
-    display: block;
-}
+body {
+    padding-top: 60px;
+  }
+
+  div {
+    padding: 0;
+    margin: 0;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  .center {
+    text-align: center;
+  }
+  
+  .center h1 {
+    margin-bottom: 10px;
+  }
+
+  .container {
+    width: 100%!important;
+  }
 
 .firstView_container {
     max-width: 100%;
@@ -22,7 +35,7 @@ section {
 .firstView {
     background-image: url(https://rails-02-sample.herokuapp.com/assets/home/cover-lg.jpg);
     height: 1000px;
-    width: 100%;
+    width: 100%!important;
 }
 
 .firstView_header {
@@ -34,6 +47,5 @@ section {
     font-size: 84px;
     line-height: 101px;
     font-family: Lato,sans-serif;
-    font-weight: 400px
-    ;
+    font-weight: 400px;
 }

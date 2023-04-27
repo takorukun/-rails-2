@@ -17,4 +17,6 @@ class User < ApplicationRecord
         BCrypt::Password.create(string, cost: cost)
     end
 
+    mount_uploader :post_image, ImageUploader
+
 end

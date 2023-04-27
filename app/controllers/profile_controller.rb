@@ -1,11 +1,25 @@
 class ProfileController < ApplicationController
-  def show
+  def edit
     @user = User.find(params[:id])
   end
 
-  def edit
+  def update
+    @user = User.find(params[:id])
+    if @user.update(user_params)
+      redirect_to @user
+    else
+      render 'edit'
+    end
   end
 
-  def update
-  end
+  private
+
+    def user_params
+        params.require(:user).permit(:name, :email, :password, :password_confirmation, :post_image)
+    end
+
+    def correct_user
+        @user = User.find(params[:id])
+        redirect_to(root_url) unless current_user? @user
+    end
 end
