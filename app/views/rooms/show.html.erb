@@ -1,0 +1,29 @@
+<h1>Rooms#show</h1>
+<p>Find me in app/views/rooms/show.html.erb</p>
+
+<h3>登録詳細</h3>
+ 
+ <table>
+   <thead>
+     <tr>
+       <th>施設名</th>
+       <th>施設詳細</th>
+       <th>料金</th>
+       <th>住所</th>
+       <th>施設画像</th>
+       <th>作成日</th>
+     </tr>
+   </thead>
+ 
+   <tbody>
+       <tr>
+         <td><%= @room.room_name %></td>
+         <td><%= @room.room_intro %></td>
+         <td><%= @room.fee_p_d %></td>
+         <td><%= @room.address %></td>
+         <td><%= @room.room_image.url %></td>
+         <td><%= @room.user_id %></td>
+       </tr>
+   </tbody>
+ </table>
+ 

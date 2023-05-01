@@ -7,11 +7,20 @@ Rails.application.routes.draw do
 
   get "/users/:id/profile", to: "users#profile"
   
+  
+
+  resources :rooms do
+    collection do
+      get 'own'
+    end
+  end
+  
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root "static_pages#home"
   get  "/signup",  to: "users#new"
-  resources :users
-  resources :profile
+  resources :users, only:[:index,:new,:show,:edit,:profile]
+  resources :profile, only:[:edit]
+
   resources :users do
     get 'profile', on: :member
   end
