@@ -1,9 +1,47 @@
 <body class="firstView_container">
-    <section class="firstView_container">
-        <div class="firstView">
-            <h2 class="firstView_header">Potepan Shareで<br>
-            まだ体験したことのない<br>
-            旅をしよう</h2>
-        </div>
-    </section>
+    <div>
+        <section class="firstView_container">
+            <div class="firstView">
+                <h2 class="firstView_header">Potepan Shareで<br>
+                まだ体験したことのない<br>
+                旅をしよう</h2>
+                <div>
+                    <%= render "rooms/search" %>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div>
+        <section>
+            <h2>おすすめのエリア</h2>
+            <div>
+                <p>
+                <%= link_to 'rooms?q%5Baddress_cont%5D=東京&commit=検索' do %>
+                    <p class="search_address_image_tokyo">東京</p>
+                <% end %>
+                </p>
+            </div>
+            <div>
+                <p>
+                <%= link_to 'rooms?q%5Baddress_cont%5D=大阪&commit=検索' do %>
+                    <p class="search_address_image_osaka">大阪</p>
+                <% end %>
+                </p>
+            </div>
+            <div>
+                <p>
+                <%= link_to 'rooms?q%5Baddress_cont%5D=京都&commit=検索' do %>
+                    <p class="search_address_image_kyoto">京都</p>
+                <% end %>
+                </p>
+            </div>
+            <div>
+                <p>
+                <%= link_to 'rooms?q%5Baddress_cont%5D=札幌&commit=検索' do %>
+                    <p class="search_address_image_sapporo">札幌</p>
+                <% end %>
+                </p>
+            </div>
+        </section>
+    </div>
 </body>

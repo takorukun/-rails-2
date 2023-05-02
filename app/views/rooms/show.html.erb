@@ -21,9 +21,17 @@
          <td><%= @room.room_intro %></td>
          <td><%= @room.fee_p_d %></td>
          <td><%= @room.address %></td>
-         <td><%= @room.room_image.url %></td>
+         <td>
+         <% if @room.room_image.blank? %>
+          <%= image_tag 'https://rails-02-sample.herokuapp.com/assets/room/default-image-4e0ac6b8d01335b5b22fe6586af13644ae51dddb6aeabf35b9174e80f13cd09d.png' %>
+         <% else %>
+          <%= image_tag @room.room_image.url %>
+         <% end %>
+         </td>
          <td><%= @room.user_id %></td>
        </tr>
    </tbody>
  </table>
+
+ <%= link_to "戻る", :back %>
  
