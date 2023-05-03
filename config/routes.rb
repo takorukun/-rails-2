@@ -7,7 +7,18 @@ Rails.application.routes.draw do
 
   get "/users/:id/profile", to: "users#profile"
   
-  
+  resources :reservations, only: [:index] do
+    member do
+      post 'confirm'
+    end
+    collection do
+      post 'confirm'
+    end
+  end
+
+  post 'reservations/create', to: "reservations#create"
+
+  get '/reservations/:id/confirm', to: "reservations#create"
 
   resources :rooms do
     collection do

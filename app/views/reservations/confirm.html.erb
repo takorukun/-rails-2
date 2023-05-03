@@ -1,0 +1,36 @@
+
+
+<h2>予約内容の確認</h2>
+ 
+ <table>
+   <thead>
+     <tr>
+       <th>チェックイン</th>
+       <th>チェックアウト</th>
+       <th>日数</th>
+       <th>人数</th>
+       <th>お支払い金額</th>
+     </tr>
+   </thead>
+ 
+   <tbody>
+       <tr>
+         <td><%= @reservation.checkin %></td>
+         <td><%= @reservation.checkout %></td>
+         <td><%= (@reservation.checkout - @reservation.checkin).to_i %>日</td>
+         <td><%= @reservation.num_o_p %>人</td>
+         <td><%=  (@reservation.checkout - @reservation.checkin).to_i * @reservation.num_o_p * @reservation.room.fee_p_d  %>¥</td>
+       </tr>
+   </tbody>
+ </table>
+
+ <%= form_with model: @reservation ,method: :post, url:reservations_create_path do |f| %>
+  <%= f.hidden_field :checkin %>
+  <%= f.hidden_field :checkout %>
+  <%= f.hidden_field :num_o_p %>
+  <%= f.hidden_field :room_id %>
+  <%= f.hidden_field :user_id %>
+  <%= f.submit '予約を確定',class: "btn btn-primary" %>
+ <% end %>
+
+ <%= link_to '戻る', :back %>

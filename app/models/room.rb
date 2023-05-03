@@ -5,8 +5,10 @@ class Room < ApplicationRecord
     validates :address, presence: true
     validates :user_id, presence: true
     mount_uploader :room_image, ImageUploader
+    
 
-    belongs_to :user, optional:true
+    has_many :reservations, dependent: :destroy
+    belongs_to :users, optional:true
 
     def self.ransackable_attributes(auth_object = nil)
         ["address", "created_at", "fee_p_d", "id", "room_image", "room_intro", "room_name", "updated_at", "user_id"]
@@ -14,6 +16,6 @@ class Room < ApplicationRecord
 
     def self.ransackable_associations(auth_object = nil)
         ["user"]
-      end
+    end
 
 end

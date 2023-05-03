@@ -45,3 +45,18 @@
     color: #fff;
     text-decoration: none;
   }
+
+  table th {
+    background-color: #346cef;
+    padding: 10px 20px;
+  }
+  
+  table td {
+    background-color: #d7dbe6;
+    padding: 10px 20px;
+  }
+  
+  .notice {
+    background-color: #ccf;
+    padding: 5px;
+  }

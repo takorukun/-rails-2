@@ -9,7 +9,6 @@ class RoomsController < ApplicationController
   end
 
   def own
-    @user = current_user
     @rooms = Room.where(user_id: current_user.id)
   end
 
@@ -32,7 +31,10 @@ class RoomsController < ApplicationController
 
   def show
     @room = Room.find(params[:id])
+    @reservation = Reservation.new
   end
+
+  private
 
   def room_params
     params.require(:room).permit!

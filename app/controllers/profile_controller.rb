@@ -6,8 +6,10 @@ class ProfileController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update(user_params)
+      flash.now[:danger] = "編集に成功しました"
       redirect_to @user
     else
+      flash.now[:danger] = "編集に失敗しました"
       render 'edit'
     end
   end
