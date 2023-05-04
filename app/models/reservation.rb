@@ -4,7 +4,7 @@ class Reservation < ApplicationRecord
     validates :num_o_p, presence: true, numericality: { only_integer: true }
     validates :user_id, presence: true
     validates :room_id, presence: true
-    validates :only_date, presence: true
+    validate :only_date
 
     belongs_to :user, optional:true
     belongs_to :room, optional:true

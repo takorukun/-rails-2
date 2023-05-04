@@ -19,8 +19,8 @@ class ImageUploader < CarrierWave::Uploader::Base
     "default.png"
   end
 
-  def extension_allowlist
-    %w(jpg jpeg gif png)
+  def extension_whitelist
+    %w[jpg jpeg gif png]
   end
 
   # For Rails 3.1+ asset pipeline compatibility:
