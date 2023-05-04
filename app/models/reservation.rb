@@ -1,7 +1,7 @@
 class Reservation < ApplicationRecord
     validates :checkin, presence: true
     validates :checkout, presence: true
-    validates :num_o_p, presence: true, numericality: { only_integer: true }
+    validates :num_o_p, presence: true, numericality: { only_integer: true }, format: { with: /\A[0-9\d]+\z/ }
     validates :user_id, presence: true
     validates :room_id, presence: true
     validate :only_date
