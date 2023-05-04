@@ -43,11 +43,19 @@
       <%= f.label :人数 %>
       <%= f.text_field :num_o_p, class: 'form-control' %>
 
+      <% if current_user.blank? %>
+
+      <%= link_to 'ログインする', login_path %>  
+      
+      <% else %>
+
       <%= f.hidden_field :user_id, :value => current_user.id %>
 
       <%= f.hidden_field :room_id, :value => @room.id %>
 
       <%= f.submit "予約する", class: "btn btn-primary" %>
+
+      <% end %>
 
     <% end %>
   </div>

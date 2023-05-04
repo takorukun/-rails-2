@@ -10,7 +10,7 @@ class ReservationsController < ApplicationController
     @room = @reservation.room_id
     if @reservation.invalid?
       flash.now[:danger] = "予約に失敗しました。"
-      render 'static_pages/home'
+      redirect_to @reservation.room
     end
   end
 
