@@ -33,4 +33,14 @@
   <%= f.submit '予約を確定',class: "btn btn-primary" %>
  <% end %>
 
- <%= link_to '戻る', :back %>
+ <%= form_with model: @reservation.room ,method: :get, url:room_path(@reservation.room.id) do |f| %>
+  <%= f.hidden_field :room_name %>
+  <%= f.hidden_field :room_intro %>
+  <%= f.hidden_field :fee_p_d %>
+  <%= f.hidden_field :address %>
+  <%= f.hidden_field :room_image %>
+  <%= f.hidden_field :user_id, :value => current_user.id  %>
+  <%= f.hidden_field :id, :value => current_user.id  %>
+  <%= f.submit '戻る',class: "btn btn-primary" %>
+ <% end %>
+ 

@@ -10,15 +10,19 @@ Rails.application.routes.draw do
   resources :reservations, only: [:index] do
     member do
       post 'confirm'
+      post 'back'
     end
     collection do
       post 'confirm'
+      post 'back'
     end
   end
 
   post 'reservations/create', to: "reservations#create"
 
   get '/reservations/:id/confirm', to: "reservations#create"
+
+  post '/reservations/:id/back', to: "reservations#back"
 
   resources :rooms do
     collection do
