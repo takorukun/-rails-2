@@ -1,5 +1,4 @@
-
-
+<body class="error_message_margin">
 <h3>登録詳細</h3>
  
  <table>
@@ -33,6 +32,7 @@
  <div class="row">
   <div class="col-md-6 col-md-offset-3">
     <%= form_with model: @reservation, method: :post, url: confirm_reservation_path(:id)  do |f| %> 
+      <%= render "shared/error", obj:@reservation %>
 
       <%= f.label :チェックイン %>
       <%= f.date_field :checkin, class: 'form-control' %>
@@ -61,6 +61,6 @@
   </div>
 </div>
 
-
  <%= link_to "戻る", :back %>
  
+ </body>

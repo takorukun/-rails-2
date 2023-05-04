@@ -1,5 +1,7 @@
 <h2>新規登録</h2>
 
+<%= render "shared/error", obj:@room %>
+
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
     <%= form_with model: @room do |f| %>
@@ -7,6 +9,10 @@
 
         <%= f.label :施設名 %>
         <%= f.text_field :room_name, class: 'form-control' %>
+
+        <% if @room.errors.include?(:room_name) %>
+        <% @room = @room.errors.full_messages_for(:room_name).first %>
+        <% end %>
   
         <%= f.label :施設詳細 %>
         <%= f.text_area :room_intro, class: 'form-control' %>

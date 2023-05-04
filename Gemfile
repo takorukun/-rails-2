@@ -32,6 +32,8 @@ gem 'pry-rails'
 
 gem 'ransack'
 
+gem 'rails-i18n'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

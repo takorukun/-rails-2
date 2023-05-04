@@ -9,8 +9,9 @@ class ReservationsController < ApplicationController
     @reservation = Reservation.new(reservation_params)
     @room = @reservation.room_id
     if @reservation.invalid?
+      @room = Room.find(params.require(:reservation)[:room_id])
       flash.now[:danger] = "予約に失敗しました。"
-      redirect_to @reservation.room
+      render 'rooms/show'
     end
   end
 
