@@ -1,11 +1,10 @@
 class Room < ApplicationRecord
     validates :room_name, presence: true
     validates :room_intro, presence: true
-    validates :fee_p_d, presence: true, numericality: { only_integer: true }
+    validates :fee_p_d, presence: true, numericality: { only_integer: true }, format: { with: /\A[0-9\d]+\z/ }
     validates :address, presence: true
     validates :user_id, presence: true
     mount_uploader :room_image, ImageUploader
-    
 
     has_many :reservations, dependent: :destroy
     belongs_to :users, optional:true
