@@ -31,6 +31,7 @@
        <td><%= reservation.checkin %></td>
        <td><%= reservation.checkout %></td>
        <td><%= reservation.created_at.strftime("%Y年%m月%d日%H:%M") %></td>
+       <td><%= button_to '予約をキャンセル', reservation, {method: :delete, class: "btn btn-danger"} %></td>
      </tr>
    <% end %>
    </tbody>

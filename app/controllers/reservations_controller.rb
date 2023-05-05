@@ -28,10 +28,19 @@ class ReservationsController < ApplicationController
     redirect_to rooms_path
   end
 
+  def destroy
+    @reservation = Reservation.find(params[:id])
+    @reservation.destroy
+    flash[:danger] = "予約をキャンセルしました。"
+    redirect_to reservations_path
+  end
+
   private
 
   def reservation_params
     params.require(:reservation).permit!
   end
+
+  protect_from_forgery :except => [:destroy]
 
 end

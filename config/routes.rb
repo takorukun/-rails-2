@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   get "/users/:id/profile", to: "users#profile"
   
-  resources :reservations, only: [:index] do
+  resources :reservations, only: [:index,:destroy] do
     member do
       post 'confirm'
       post 'back'
