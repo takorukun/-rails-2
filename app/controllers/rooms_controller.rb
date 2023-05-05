@@ -1,10 +1,14 @@
 class RoomsController < ApplicationController
+  
 
   def index
-    @q = Room.ransack(params[:id])
+    @q = Room.ransack(params[:q])
     @rooms = @q.result(distinct: true)
     if @q_home
       @rooms = @q_home.result(distinct: true)
+      if @q_home && @q
+        @rooms = @q_home&&@q.result(distinct: true)
+      end
     end
   end
 
