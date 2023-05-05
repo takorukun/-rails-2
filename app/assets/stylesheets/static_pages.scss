@@ -1,0 +1,98 @@
+// Place all the styles related to the static_pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+body {
+    padding-top: 60px;
+  }
+
+  div {
+    padding: 0;
+    margin: 0;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  .center {
+    text-align: center;
+  }
+  
+  .center h1 {
+    margin-bottom: 10px;
+  }
+
+  .container {
+    width: 100%!important;
+  }
+
+.firstView_container {
+    max-width: 100%;
+    height: 100px;
+}
+
+.firstView {
+  background-image: url(https://rails-02-sample.herokuapp.com/assets/home/cover-lg.jpg);
+  height: 1080px;
+  max-width: 100%;
+}
+
+.search_box {
+  width: 400px;
+  position: relative;
+  left: 380px;
+}
+
+
+.firstView_header {
+    margin-bottom: 300px;
+    text-align: center;
+    top: 100px;
+    position: relative;
+    color: #fff;
+    font-size: 84px;
+    line-height: 101px;
+    font-family: Lato,sans-serif;
+    font-weight: 400px;
+}
+
+.buttom_view {
+  height: 900px;
+}
+
+.search_address_image_tokyo {
+  background-image: url(https://rails-02-sample.herokuapp.com/assets/home/recommend-area/tokyo.jpg);
+  background-size: cover;
+  background-position: 50%;
+  height: 445px;
+  width: calc(25% - 24px);
+}
+
+.search_address_image_osaka {
+  background-image: url(https://rails-02-sample.herokuapp.com/assets/home/recommend-area/osaka.jpg);
+  background-size: cover;
+  background-position: 50%;
+  height: 445px;
+  width: calc(25% - 24px);
+}
+
+.search_address_image_kyoto {
+  background-image: url(https://rails-02-sample.herokuapp.com/assets/home/recommend-area/kyoto.jpg);
+  background-size: cover;
+  background-position: 50%;
+  height: 445px;
+  width: calc(25% - 24px);
+}
+
+.search_address_image_sapporo {
+  background-image: url(https://rails-02-sample.herokuapp.com/assets/home/recommend-area/sapporo.jpg);
+  background-size: cover;
+  background-position: 50%;
+  height: 445px;
+  width: calc(25% - 24px);
+}
+
+.search_area {
+  font-size: 50px;
+}

@@ -1,0 +1,24 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        name: 名前
+        password: パスワード
+        post_image: イメージ
+        introduction: 自己紹介
+      room:
+        room_name: 宿名
+        room_intro: 宿紹介
+        fee_p_d: 料金
+        room_image: 宿イメージ
+        address: 住所
+        created_at: 宿登録日
+      reservation:
+        checkin: チェックイン日
+        checkout: チェックアウト日
+        num_o_p: 人数
+        only_date: 正しくチェックインとチェックアウト
+      errors:
+              
+  
+    
